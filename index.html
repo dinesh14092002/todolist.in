@@ -107,51 +107,50 @@
                 </ul>
             </div>
             <div class="child_3">
-                <img src="icons8-avatar-48.png" alt=""
-                    class="pro_pic">
-                <p class="p_name">dineshkumar<br><span class="span_2">@username</span></p>
-                <button class="follow"><img src="" alt="">follow<img
-                        src="icons8-plus-24.png" alt=""
-                        class="plus_2"></button>
-                <button class="msg"><img src="" alt="">messages<img
-                        src="icons8-messages-50.png" alt=""
-                        class="plus_3"></button>
-
-                <h5 class="note">private note</h5>
-                <textarea name="" id="" cols="45" rows="6" class="txt_area"></textarea>
-                <p class="mail"><img src="icons8-mail-50.png" alt=""
-                        class="mail_pic">dinesh@gmail.com</p>
-                        <hr style="width: 90%;">
-                <img src="icons8-twitter-50.png" alt=""
-                    class="twitter_pic">
-                <img src="icons8-instagram-50.png" alt="">
-                <img src="icons8-pinterest-24.png" alt="">
-                <img src="icons8-facebook-50.png" alt="">
-                <hr style="width: 90%;">
-                <p><img src="icons8-link-24.png" alt=""
-                        class="link">robot.co</p>
-
-                <table>
-                    <tr>
-                        <th>produt</th>
-                        <th>price</th>
-                        <th>Date</th>
-                    </tr>
-                    <tr>
-                        <td><img src="icons8-avatar-48.png" alt=""
-                                class="table_name">Dineshkumar<br><span class="span_3">@username</span></td>
-                        <td><button class="amount">$64.01</button></td>
-                        <td class="date">Apr 8,2021</td>
-                    </tr>
-                    <hr style="width: 90%;">
-                   
-
-                </table>
-
+                <div class="container">
+        <h1 class="todo">To-Do List</h1>
+        <div class="input-container">
+            <input class="inp_txt" type="text" id="taskInput" placeholder="Add a new task">
+            <button class="add_task" onclick="addTask()">Add Task</button>
+        </div>
+        <ul id="taskList">
+            <!-- Tasks will be added dynamically here -->
+        </ul>
+    </div>
+                
             </div>
         </div>
     </div>
  </div>
+     <script>
+    // Function to add a new task
+function addTask() {
+    var input = document.getElementById("taskInput");
+    var task = input.value.trim(); // Trim to remove leading and trailing spaces
+
+    if (task !== "") {
+        var item = document.getElementById("taskList");
+        var things = document.createElement("li");
+        things.textContent = task;
+
+        // Add a button to remove the task
+        var removeButton = document.createElement("button");
+        removeButton.textContent = "delete";
+        removeButton.classList.add("remove-btn");
+        removeButton.onclick = function() {
+            things.remove();
+        };
+
+        things.appendChild(removeButton);
+        item.appendChild(things);
+
+        // Clear input field after adding task
+        input.value = "";
+    } else {
+        alert("Please enter a task!");
+    }
+}
+</script>
 
 
 </body>
