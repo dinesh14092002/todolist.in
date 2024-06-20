@@ -34,6 +34,7 @@
 }
 .first_ul{
     padding-top: 20px;
+    margin-left: 30px
 }
 img{
     width: 20px;
@@ -144,7 +145,7 @@ button{
     height: 410px;
     width:400px;
     margin-left: 670px;
-    padding-top: 20px;
+    padding-top: 10px;
     margin-top: 135px;
     border-radius: 10px;
 }
@@ -301,6 +302,5 @@ li:last-child {
 }
 .inp_txt{
   border-radius:10px;
-  border-style:none;
-  margin-right:10px;
+  margin-right:20px;
  }
