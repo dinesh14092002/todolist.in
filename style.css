@@ -17,7 +17,7 @@
     position: absolute;
     height: 524px;
     width: 250px;
-    margin-left: 60px;
+    margin-left: 65px;
     margin-top: 30px;
     border-radius: 10px;
 
@@ -145,7 +145,7 @@ button{
     height: 410px;
     width:400px;
     margin-left: 670px;
-    padding-top: 10px;
+
     margin-top: 135px;
     border-radius: 10px;
 }
@@ -248,7 +248,7 @@ th{
 }
 .container {
     max-width: 600px;
-    margin: 20px auto;
+    
   
     padding: 20px;
     border-radius: 8px;
@@ -258,6 +258,7 @@ th{
 .todo {
     text-align: center;
     color: blue;
+    margin:3px;
 }
 
 .input-container {
